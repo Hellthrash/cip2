@@ -26,12 +26,10 @@ class CreatePassengerTable extends Migration
             $table->enum('share_room',['0','1']); //0:no 1:yes
 
             //fk conjunto de huespedes asociados 
-            $table->string('passengers_id')->unsigned();
+            $table->integer('passengers_id')->unsigned();
             //fk docente solicitante
-            $table->string('user_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
-            //pk
-            $table->primary('id_passenger');
         });
     }
 
