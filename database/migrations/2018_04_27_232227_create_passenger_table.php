@@ -20,15 +20,17 @@ class CreatePassengerTable extends Migration
             $table->string('lName_1');
             $table->string('lName_2');
             $table->string('nationality');
-            $table->string('country_o'); //country of origin
-            $table->string('country_r'); //country of residence
+
+            //fk countries
+            $table->integer('country_o'); //country of origin
+            $table->integer('country_r'); //country of residence
+            
             $table->string('university');
             $table->enum('share_room',['0','1']); //0:no 1:yes
 
             //fk conjunto de huespedes asociados 
             $table->integer('passengers_id')->unsigned();
             //fk docente solicitante
-            $table->integer('user_id')->unsigned();
 
         });
     }

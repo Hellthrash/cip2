@@ -20,6 +20,8 @@ class CreateReservationsTable extends Migration
             $table->enum('confirm',['0','1']);
             $table->date('confirm_date');
             $table->enum('payment_m',['cash','credit_card','e_transfer']);
+            
+            //fk rooms
             $table->integer('room');
 
             //fk usuario responsable 
